@@ -1,20 +1,48 @@
+p {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: all .2s ease-in-out;
+}
+
+a:hover {
+  transform: translate(.5rem);
+}
+
 * {
   font-family: Poppins, sans-serif;
+}
+
+.social:hover {
+  transform: translateY(-.5rem)
 }
 
 body {
   font-family: Poppins, sans-serif;
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 /* main */
+main {
+  height: 90vh;
+}
+
 .background {
   height: 100%;
   width: 100%;
 }
 
 .community-button {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +53,9 @@ body {
   border-radius: .25rem;
   font-size: 1.2rem;
   color: white;
-  padding: 1rem .9rem;
+  padding: 1.1rem 1.5rem;
+  bottom: 0;
+  left: 0;
 }
 
 
@@ -34,15 +64,16 @@ body {
 /* footer */
 footer {
   display: flex;
-  padding: 2.5rem 6rem 1rem 6rem;
+  padding: 2.5rem 6rem 3rem 6rem;
   background-color: white;
   justify-content: space-between;
+  height: 10vh;
 }
 
 .footer-links-container {
   display: flex;
   flex-direction: column;
-  gap: .4rem;
+  gap: .6rem;
 }
 
 .links-container {
@@ -53,11 +84,10 @@ footer {
 .links {
   display: flex;
   flex-direction: column;
-  gap: .3rem;
+  gap: .6rem;
 }
 
 .footer-headings {
-  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -87,8 +117,72 @@ footer {
   padding: .15rem;
   border-radius: .2rem;
   background-color: rgb(15, 15, 15);
+  transition: all .2s ease-in-out;
 }
 
 .copyright {
   align-self: flex-end;
 }
+
+@media (max-width: 992px) {
+  footer {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .links-container {
+    gap: 4rem;
+  }
+
+  .footer-logo {
+    height: 3.5rem;
+  }
+
+  p {
+    font-size: .91rem;
+  }
+
+  h6 {
+    font-size: 1.4rem;
+  }
+
+  .socials-container {
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 512px) {
+  main {
+    height: 60vh;
+  }
+
+  footer {
+    gap: 2rem;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    min-height: 40vh;
+  }
+
+  .copyright {
+    align-self: flex-start;
+  }
+
+  .socials-container {
+    margin-top: 2rem;
+    justify-content: flex-start;
+  }
+
+  .footer-logo {
+    height: 4rem;
+    width: auto;
+  }
+
+  .links-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+
+
+@media (max-width: 1200px) {}
