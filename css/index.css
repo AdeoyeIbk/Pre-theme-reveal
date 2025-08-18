@@ -33,15 +33,14 @@ body {
 
 /* main */
 .hero {
-  height: 90vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 70vh; /* Adjust this value to move the button lower */
   background-image: url('../assets/resized.png');
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: top center;
   background-repeat: no-repeat;
 }
 
@@ -59,7 +58,6 @@ body {
   color: white;
   padding: 1.5rem 1.5rem;
   position: relative;
-  margin-bottom: 8rem;
 }
 
 
