@@ -20,7 +20,7 @@ a:hover {
   font-family: Poppins, sans-serif;
 }
 
-.social:hover {
+.social-icon:hover {
   transform: translateY(-.5rem)
 }
 
@@ -32,17 +32,19 @@ body {
 }
 
 /* main */
-main {
+.hero {
   height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: url('../assets/resized.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.background {
-  height: 100%;
-  width: 100%;
-}
 
 .community-button {
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,12 +52,12 @@ main {
   height: 3rem; */
   background: linear-gradient(#690000, #870707);
   border: none;
-  border-radius: .25rem;
-  font-size: 1.2rem;
+  border-radius: .5rem;
+  font-size: 1.8rem;
   color: white;
-  padding: 1.1rem 1.5rem;
-  bottom: 0;
-  left: 0;
+  padding: 1.5rem 1.5rem;
+  position: relative;
+  margin-bottom: 8rem;
 }
 
 
@@ -111,12 +113,17 @@ footer {
   align-items: center;
 }
 
-.social {
+.social-icon {
   height: 2rem;
   width: 2rem;
-  padding: .15rem;
+  padding: .25rem;
   border-radius: .2rem;
   background-color: rgb(15, 15, 15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
   transition: all .2s ease-in-out;
 }
 
@@ -149,11 +156,15 @@ footer {
   .socials-container {
     padding-right: 1rem;
   }
+
+  .hero {
+    background-image: url('../assets/resized\ tablet.png');
+  }
 }
 
 @media (max-width: 512px) {
-  main {
-    height: 60vh;
+  .hero {
+    height: 80vh;
   }
 
   footer {
@@ -180,6 +191,10 @@ footer {
   .links-container {
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .hero {
+    background-image: url('../assets/resized\ mobile.png');
   }
 }
 
