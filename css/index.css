@@ -229,4 +229,7 @@ footer {
   .community-button {
     font-size: .9rem;
   }
+     .community-button {
+       padding: 1rem;
+     }
 }
