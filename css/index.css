@@ -62,12 +62,14 @@ body {
   border-radius: .5rem;
   font-size: 1.3rem;
   color: white;
-  padding: 1.5rem 1.5rem;
+
+  padding: 1.4rem 2rem;
   position: absolute;
   transition: none;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: fit-content;
 }
 
 
@@ -156,8 +158,8 @@ footer {
 
 @media (max-width: 992px) {
   footer {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .links-container {
@@ -182,6 +184,12 @@ footer {
 
   .hero {
     background-image: url('../assets/resized\ tablet.png');
+  }
+
+  .community-button {
+    top: 70%;
+    font-size: 2rem;
+    padding: 2rem 2rem;
   }
 }
 
@@ -222,6 +230,7 @@ footer {
 
   .community-button {
     font-size: 1.2rem;
+    top: 75%;
   }
 }
 
@@ -229,7 +238,9 @@ footer {
   .community-button {
     font-size: .9rem;
   }
-     .community-button {
-       padding: 1rem;
-     }
+
+  .community-button {
+    padding: 1rem;
+    top: 50%;
+  }
 }
