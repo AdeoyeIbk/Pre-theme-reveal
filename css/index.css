@@ -219,4 +219,14 @@ footer {
     flex-direction: column;
     gap: 2rem;
   }
+
+  .community-button {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 330px) {
+  .community-button {
+    font-size: .9rem;
+  }
 }
