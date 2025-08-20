@@ -1,5 +1,10 @@
+:root {
+  --primary-color: #F00;
+}
+
 p {
   font-size: 1.2rem;
+  color: white;
 }
 
 h6 {
@@ -66,14 +71,64 @@ body {
   padding: 1.4rem 2rem;
   position: absolute;
   transition: none;
-  top: 80%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: fit-content;
 }
 
+/* About */
+.about {
+  padding: 4rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100vh;
+  background-image: url('../assets/noise-texture.png'), url('../assets/image-fx-141.png');
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+}
 
+.about h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  align-self: flex-end
+}
 
+.red-text {
+  color: var(--primary-color);
+}
+
+.x {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.about-text {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.about p {
+  font-size: 1.5rem;
+  max-width: 53rem;
+  line-height: normal;
+}
+
+.tedx-text-container-two {
+  justify-self: flex-end;
+  height: 100%;
+}
+
+.tedx-text-container-two>p {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 400;
+}
 
 /* footer */
 footer {
@@ -102,6 +157,10 @@ footer {
 
 .links>a {
   transition: all .2s ease-in-out;
+}
+
+.links>a>p {
+  color: black;
 }
 
 .links>a:hover {
@@ -149,6 +208,7 @@ footer {
 
 .copyright {
   align-self: flex-end;
+  color: black
 }
 
 
