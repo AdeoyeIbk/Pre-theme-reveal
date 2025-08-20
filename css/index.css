@@ -145,6 +145,15 @@ body {
   font-weight: 400;
 }
 
+/* tedx bowen university */
+.tedx-bowen {
+  height: 100vh;
+  background-image: url('../assets/tedx-bowen-background-image.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* footer */
 footer {
   display: flex;
