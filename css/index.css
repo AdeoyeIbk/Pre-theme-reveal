@@ -395,7 +395,7 @@ footer {
 
 }
 
-@media (max-width: 330px) {
+@media (max-width: 365px) {
   .community-button {
     font-size: .9rem;
   }
@@ -403,5 +403,20 @@ footer {
   .community-button {
     padding: 1rem;
     top: 40%;
+  }
+
+  .tedx-independence-description {
+    line-height: 100% !important;
+  }
+
+  .socials-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .social-handle {
+    align-self: flex-start;
   }
 }
