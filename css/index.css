@@ -17,6 +17,13 @@ a {
   transition: all .2s ease-in-out;
 }
 
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  align-self: flex-end
+}
+
 .transition {
   transition: all .2s ease-in-out;
 }
@@ -89,13 +96,6 @@ body {
   background-size: cover, cover;
 }
 
-.about h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  align-self: flex-end
-}
-
 .about-top {
   display: flex;
   flex-direction: column;
@@ -137,7 +137,7 @@ body {
 }
 
 
-.tedx-text-container-two>p {
+.tedx-independence-description {
   color: white;
   font-weight: 400;
 }
@@ -159,6 +159,17 @@ body {
 
 .content {
   height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.tedx-bowen-info>h2 {
+  max-width: 40rem;
+  z-index: 5;
+}
+
+.tedx-bowen-description {
+  text-align: right;
 }
 
 /* footer */
@@ -294,10 +305,6 @@ footer {
     width: 4rem;
   }
 
-  .hero {
-    /* background-image: url('../assets/resized\ tablet.webp'); */
-  }
-
   .community-button {
     top: 60%;
     font-size: 2.7rem;
@@ -352,8 +359,40 @@ footer {
 
   .community-button {
     font-size: 1.2rem;
-    top: 75%;
+    top: 72%;
   }
+
+  /* about */
+
+  .about {
+    padding: 4rem 1.2rem 0rem 1.2rem;
+  }
+
+  .tedx-independence-description {
+    font-size: .8rem;
+    line-height: 150% !important;
+  }
+
+  .tedx-logo {
+    height: 6rem;
+    width: auto;
+  }
+
+  /* tedx bowen */
+  .tedx-bowen {
+    height: auto;
+    padding: 10rem 4rem 0rem 0rem;
+  }
+
+  .senate-building {
+    height: 15rem;
+  }
+
+  .tedx-bowen-description {
+    text-align: right;
+  }
+
+
 }
 
 @media (max-width: 330px) {
