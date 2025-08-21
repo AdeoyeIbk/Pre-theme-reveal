@@ -409,6 +409,11 @@ footer {
     line-height: 100% !important;
   }
 
+  .tedx-logo {
+    height: 4.5rem;
+    width: auto;
+  }
+
   .socials-container {
     flex-direction: column;
     flex-wrap: wrap;
