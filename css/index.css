@@ -154,8 +154,9 @@ body {
 }
 
 .senate-building {
-  height: 50rem;
-  width: auto;
+  height: 100%;
+  width: 100%;
+  display: block;
 }
 
 .content {
@@ -164,14 +165,26 @@ body {
   position: relative;
 }
 
-.tedx-bowen-info>h2 {
-  max-width: 40rem;
-  z-index: 5;
+.tedx-bowen-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .tedx-bowen-description {
   text-align: right;
+  line-height: normal;
 }
+
+.tedx-bowen-info {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  /* width: 100%; */
+  padding: 1rem;
+  text-align: right;
+}
+
 
 /* footer */
 footer {
@@ -336,9 +349,28 @@ footer {
     font-size: 2.5rem;
   }
 
-  .senate-building {
+  /* .senate-building {
     height: 30rem;
     width: auto;
+  } */
+
+  .tedx-bowen {
+    padding: 10rem 4rem 0rem 0rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tedx-bowen-info {
+    position: relative;
+    padding: 1rem;
+    text-align: right;
+    top: auto;
+    left: auto;
+    max-width: 60%;
+    align-self: flex-end;
   }
 }
 
@@ -425,9 +457,9 @@ footer {
     padding: 12rem 4rem 0rem 0rem;
   }
 
-  .senate-building {
+  /* .senate-building {
     height: 12rem;
-  }
+  } */
 
   .tedx-bowen-description {
     text-align: right;
