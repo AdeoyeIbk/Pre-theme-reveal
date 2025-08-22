@@ -144,7 +144,7 @@ body {
 
 /* tedx bowen university */
 .tedx-bowen {
-  height: 143vh;
+  height: 100%;
   background-image: url('../assets/tedx-bowen-background-image.webp');
   background-position: center left;
   background-repeat: no-repeat;
@@ -154,7 +154,8 @@ body {
 }
 
 .senate-building {
-  height: 56rem;
+  height: 50rem;
+  width: auto;
 }
 
 .content {
@@ -256,10 +257,22 @@ footer {
 
 
 @media (max-width: 1200px) {
-  /* Place largest breakpoint first if needed */
-}
+  .tedx-logo {
+    height: 13rem;
+    width: auto;
+  }
 
-@media (max-width: 992px) {
+  .community-button {
+    font-size: 3rem;
+    color: white;
+    padding: 2rem 2rem;
+    top: 80%;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
   footer {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -267,7 +280,7 @@ footer {
     display: grid;
     grid-template: 1fr auto/1fr 1fr;
     gap: 2rem;
-    justify-items: flex-end;
+    justify-items: flex-start;
   }
 
   .copyright {
@@ -275,6 +288,9 @@ footer {
     justify-self: center;
     align-self: center;
   }
+}
+
+@media (max-width: 992px) {
 
   .links-container {
     gap: 4rem;
@@ -319,9 +335,18 @@ footer {
   h2 {
     font-size: 2.5rem;
   }
+
+  .senate-building {
+    height: 30rem;
+    width: auto;
+  }
 }
 
 @media (max-width: 512px) {
+  p {
+    font-size: 1rem;
+  }
+
   .hero {
     height: 80vh;
     background-image: url('../assets/resized\ mobile.webp');
@@ -342,7 +367,7 @@ footer {
   }
 
   .socials-container {
-    margin-top: 2rem;
+    margin-top: 1rem;
     justify-content: flex-start;
     padding-right: 0;
   }
@@ -360,6 +385,12 @@ footer {
   .community-button {
     font-size: 1.2rem;
     top: 72%;
+    padding: 1rem;
+  }
+
+  .social-icon {
+    height: 2rem;
+    width: 2rem;
   }
 
   /* about */
@@ -369,12 +400,22 @@ footer {
   }
 
   .tedx-independence-description {
-    font-size: .8rem;
-    line-height: 150% !important;
+    font-size: 1.4rem;
+    line-height: 100% !important;
+  }
+
+  .tedx-text-container-two {
+    justify-self: flex-end;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem
   }
 
   .tedx-logo {
-    height: 6rem;
+    height: 7.5rem;
     width: auto;
   }
 
@@ -385,7 +426,7 @@ footer {
   }
 
   .senate-building {
-    height: 15rem;
+    height: 12rem;
   }
 
   .tedx-bowen-description {
@@ -406,11 +447,12 @@ footer {
   }
 
   .tedx-independence-description {
+    font-size: 0.95rem;
     line-height: 100% !important;
   }
 
   .tedx-logo {
-    height: 4.5rem;
+    height: 6rem;
     width: auto;
   }
 
