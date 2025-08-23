@@ -46,6 +46,38 @@ body {
   display: flex;
   flex-direction: column;
   /* height: 100vh; */
+  animation: fadeIn 1.5s ease-in;
+}
+
+/* @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+/* appear  animation */
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.fade-element {
+  animation: appear 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-timeline: view();
+  animation-range: entry cover 25%;
 }
 
 /* main */
@@ -118,7 +150,7 @@ body {
   gap: 2.5rem;
 }
 
-.about p {
+.about-text-container p {
   max-width: 53rem;
   line-height: normal;
 }
@@ -372,6 +404,11 @@ footer {
     max-width: 60%;
     align-self: flex-end;
   }
+
+  .tedx-independence-description {
+    font-size: 1rem;
+    line-height: inherit;
+  }
 }
 
 @media (max-width: 512px) {
@@ -451,7 +488,7 @@ footer {
   }
 
   .tedx-logo {
-    height: 7.5rem;
+    height: 7.45rem;
     width: auto;
   }
 
