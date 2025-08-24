@@ -612,3 +612,12 @@ footer {
   opacity: 1;
   transform: scale(1) translateY(0);
 }
+
+.reading-animate span {
+  opacity: 0;
+  transition: opacity 0.05s;
+}
+
+.reading-animate span.visible {
+  opacity: 1;
+}

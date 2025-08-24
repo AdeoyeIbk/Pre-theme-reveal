@@ -13,7 +13,7 @@
 
 <body>
   <!-- hero -->
-  <section class="hero-section" >
+  <section class="hero-section">
     <a href="https://chat.whatsapp.com/L4BGi7FobJcFfbyFGBjyC7?mode=ac_t" class="join-community-button">Join the
       community</a>
   </section>
@@ -49,10 +49,10 @@
         <h2 class=" fade-element">What is TEDx Bowen University?</h2>
         <p class="bowen-description fade-element">TEDxBowen University is an independently organized TEDx event
           officially
-          licensed by TED and proudly hosted
+          licensed by TEDx and proudly hosted
           at Bowen
           University, Iwo, Osun State.
-          It is part of TED’s global movement to share “ideas worth spreading” — bringing together inspiring speakers,
+          It is part of TED's global movement to share “ideas worth spreading” — bringing together inspiring speakers,
           visionaries, students, creatives, and changemakers who share ideas that challenge, educate, and ignite
           transformation.</p>
       </div>
@@ -129,6 +129,93 @@
       animatedElements.forEach(el => {
         observer.observe(el);
       });
+    });
+  </script>
+  <script>
+    function animateReadingParagraphsSequentially(selector, delay = 30) {
+      const paragraphs = Array.from(document.querySelectorAll(selector));
+      let current = 0;
+
+      function animateParagraph(paragraph, onComplete) {
+        const text = paragraph.textContent;
+        paragraph.innerHTML = '';
+        paragraph.classList.add('reading-animate');
+        text.split('').forEach(char => {
+          const span = document.createElement('span');
+          span.textContent = char;
+          paragraph.appendChild(span);
+        });
+        let i = 0;
+        function reveal() {
+          if (i < paragraph.children.length) {
+            paragraph.children[i].classList.add('visible');
+            i++;
+            setTimeout(reveal, delay);
+          } else if (onComplete) {
+            onComplete();
+          }
+        }
+        paragraph.style.visibility = 'visible';
+        reveal();
+      }
+
+      // Hide all paragraphs initially
+      paragraphs.forEach(p => p.style.visibility = 'hidden');
+
+      // Trigger animation when the first paragraph is in view
+      if (paragraphs.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              observer.disconnect();
+              function next() {
+                if (current < paragraphs.length) {
+                  animateParagraph(paragraphs[current], next);
+                  current++;
+                }
+              }
+              next();
+            }
+          });
+        }, { threshold: 0.2 });
+        observer.observe(paragraphs[0]);
+      }
+    }
+
+    function animateReadingText(selector, delay = 30) {
+      document.querySelectorAll(selector).forEach(paragraph => {
+        const text = paragraph.textContent;
+        paragraph.innerHTML = '';
+        paragraph.classList.add('reading-animate');
+        text.split('').forEach(char => {
+          const span = document.createElement('span');
+          span.textContent = char;
+          paragraph.appendChild(span);
+        });
+        let i = 0;
+        function reveal() {
+          if (i < paragraph.children.length) {
+            paragraph.children[i].classList.add('visible');
+            i++;
+            setTimeout(reveal, delay);
+          }
+        }
+        // Trigger animation when paragraph is in view
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              reveal();
+              observer.disconnect();
+            }
+          });
+        }, { threshold: 0.2 });
+        observer.observe(paragraph);
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      animateReadingParagraphsSequentially('.about-text-wrapper > p');
+      animateReadingText('.bowen-description');
     });
   </script>
 </body>
