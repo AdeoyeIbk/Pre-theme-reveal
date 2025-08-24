@@ -37,7 +37,7 @@ h2 {
   box-sizing: border-box;
 }
 
-.social-icon:hover {
+.footer-social-icon:hover {
   transform: translateY(-.5rem)
 }
 
@@ -45,14 +45,11 @@ body {
   font-family: Poppins, sans-serif;
   display: flex;
   flex-direction: column;
-  /* height: 100vh; */
   animation: fadeIn 2s ease-in-out;
 }
 
-
-
-/* main */
-.hero {
+/* hero */
+.hero-section {
   width: auto;
   height: 100vh;
   display: flex;
@@ -65,13 +62,10 @@ body {
   background-repeat: no-repeat;
 }
 
-
-.community-button {
+.join-community-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 12rem;
-  height: 3rem; */
   background: linear-gradient(#690000, #870707);
   border: none;
   border-radius: .5rem;
@@ -86,20 +80,19 @@ body {
   width: fit-content;
 }
 
-/* About */
-.about {
+/* about */
+.about-section {
   padding: 4rem 6rem 0rem 6rem;
   display: flex;
   flex-direction: column;
   gap: 10rem;
-  /* height: 100vh; */
   background-image: url('../assets/noise-texture.webp'), url('../assets/image-fx-141.webp');
   background-position: center center, center center;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
 }
 
-.about-top {
+.about-header {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -109,24 +102,24 @@ body {
   color: var(--primary-color);
 }
 
-.x {
+.independence-x {
   font-size: 2.5rem;
   font-weight: 600;
 }
 
-.about-text-container {
+.about-text-wrapper {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   gap: 2.5rem;
 }
 
-.about-text-container p {
+.about-text-wrapper p {
   max-width: 53rem;
   line-height: normal;
 }
 
-.tedx-text-container-two {
+.tedx-independence-wrapper {
   justify-self: flex-end;
   height: 100%;
   display: flex;
@@ -134,19 +127,18 @@ body {
   align-items: center;
 }
 
-.tedx-logo {
+.tedx-logo-img {
   height: 20rem;
   width: auto;
 }
 
-
-.tedx-independence-description {
+.independence-description {
   color: white;
   font-weight: 400;
 }
 
-/* tedx bowen university */
-.tedx-bowen {
+/* bowen section */
+.bowen-section {
   height: 100%;
   background-image: url('../assets/tedx-bowen-background-image.webp');
   background-position: center left;
@@ -156,38 +148,36 @@ body {
   padding: 25rem 4rem 0rem 0rem;
 }
 
-.senate-building {
+.senate-building-img {
   height: 100%;
   width: 100%;
   display: block;
 }
 
-.content {
+.bowen-content {
   height: 100%;
   display: flex;
   position: relative;
 }
 
-.tedx-bowen-info {
+.bowen-info {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.tedx-bowen-description {
+.bowen-description {
   text-align: right;
   line-height: normal;
 }
 
-.tedx-bowen-info {
+.bowen-info {
   position: absolute;
   top: 10%;
   left: 50%;
-  /* width: 100%; */
   padding: 1rem;
   text-align: right;
 }
-
 
 /* footer */
 footer {
@@ -197,47 +187,46 @@ footer {
   justify-content: space-between;
 }
 
-.footer-links-container {
+.footer-links-group {
   display: flex;
   flex-direction: column;
   gap: .6rem;
 }
 
-.links-container {
+.footer-links-wrapper {
   display: flex;
   gap: 5rem;
 }
 
-.links {
+.footer-link-list {
   display: flex;
   flex-direction: column;
   gap: .6rem;
 }
 
-.links>a {
+.footer-link-list>a {
   transition: all .2s ease-in-out;
 }
 
-.links>a>p,
-.social-handle {
+.footer-link-list>a>p,
+.footer-social-handle {
   color: black;
 }
 
-.links>a:hover {
+.footer-link-list>a:hover {
   transform: translateX(.2rem);
 }
 
-
-.footer-headings {
+.footer-heading {
   font-weight: bold;
 }
 
-.footer-logo {
+.footer-logo-img {
   height: 4rem;
   width: auto;
 }
 
-.socials-container {
+.footer-socials {
   display: flex;
   gap: .9rem;
   justify-content: center;
@@ -245,14 +234,14 @@ footer {
   padding-right: 3rem;
 }
 
-.social-icons {
+.footer-social-icons {
   display: flex;
   gap: .5rem;
   justify-content: center;
   align-items: center;
 }
 
-.social-icon {
+.footer-social-icon {
   height: 2rem;
   width: 2rem;
   padding: .25rem;
@@ -266,19 +255,19 @@ footer {
   transition: all .2s ease-in-out;
 }
 
-.copyright {
+.footer-copyright {
   align-self: flex-end;
-  color: black
+  color: black;
 }
 
-
+/* media queries */
 @media (max-width: 1200px) {
-  .tedx-logo {
+  .tedx-logo-img {
     height: 13rem;
     width: auto;
   }
 
-  .community-button {
+  .join-community-button {
     font-size: 3rem;
     color: white;
     padding: 2rem 2rem;
@@ -299,7 +288,7 @@ footer {
     justify-items: flex-start;
   }
 
-  .copyright {
+  .footer-copyright {
     grid-column: 1 / -1;
     justify-self: center;
     align-self: center;
@@ -307,18 +296,13 @@ footer {
 }
 
 @media (max-width: 992px) {
-
-  .links-container {
+  .footer-links-wrapper {
     gap: 4rem;
   }
 
-  .footer-logo {
+  .footer-logo-img {
     height: 6rem;
   }
-
-  /* a>p {
-    font-size: .91rem;
-  } */
 
   p {
     font-size: 1.6rem;
@@ -328,22 +312,22 @@ footer {
     font-size: 1.7rem;
   }
 
-  .socials-container {
+  .footer-socials {
     padding-right: .4rem;
   }
 
-  .social-icon {
+  .footer-social-icon {
     height: 4rem;
     width: 4rem;
   }
 
-  .community-button {
+  .join-community-button {
     top: 60%;
     font-size: 2.7rem;
     padding: 2rem 2rem;
   }
 
-  .tedx-logo {
+  .tedx-logo-img {
     height: 10rem;
     width: auto;
   }
@@ -352,21 +336,16 @@ footer {
     font-size: 2.5rem;
   }
 
-  /* .senate-building {
-    height: 30rem;
-    width: auto;
-  } */
-
-  .tedx-bowen {
+  .bowen-section {
     padding: 10rem 4rem 0rem 0rem;
   }
 
-  .content {
+  .bowen-content {
     display: flex;
     flex-direction: column;
   }
 
-  .tedx-bowen-info {
+  .bowen-info {
     position: relative;
     padding: 1rem;
     text-align: right;
@@ -376,7 +355,7 @@ footer {
     align-self: flex-end;
   }
 
-  .tedx-independence-description {
+  .independence-description {
     font-size: 1rem;
     line-height: inherit;
   }
@@ -391,9 +370,9 @@ footer {
     font-size: 1rem;
   }
 
-  .hero {
+  .hero-section {
     height: 80vh;
-    background-image: url('../assets/resized\ mobile.webp');
+    background-image: url('../assets/resized mobile.webp');
   }
 
   footer {
@@ -406,49 +385,48 @@ footer {
     padding-right: 1rem;
   }
 
-  .copyright {
+  .footer-copyright {
     align-self: flex-start;
   }
 
-  .socials-container {
+  .footer-socials {
     margin-top: 1rem;
     justify-content: flex-start;
     padding-right: 0;
   }
 
-  .footer-logo {
+  .footer-logo-img {
     height: 4rem;
     width: auto;
   }
 
-  .links-container {
+  .footer-links-wrapper {
     flex-direction: column;
     gap: 2rem;
   }
 
-  .community-button {
+  .join-community-button {
     font-size: 1.2rem;
     top: 72%;
     padding: 1rem;
   }
 
-  .social-icon {
+  .footer-social-icon {
     height: 2rem;
     width: 2rem;
   }
 
   /* about */
-
-  .about {
+  .about-section {
     padding: 4rem 1.2rem 0rem 1.2rem;
   }
 
-  .tedx-independence-description {
+  .independence-description {
     font-size: 1.4rem;
     line-height: 100% !important;
   }
 
-  .tedx-text-container-two {
+  .tedx-independence-wrapper {
     justify-self: flex-end;
     height: 100%;
     display: flex;
@@ -458,65 +436,55 @@ footer {
     gap: 5rem
   }
 
-  .tedx-logo {
+  .tedx-logo-img {
     height: 7.45rem;
     width: auto;
   }
 
-  /* tedx bowen */
-  .tedx-bowen {
+  /* bowen section */
+  .bowen-section {
     height: auto;
     padding: 0rem;
     padding-top: 1.5rem;
   }
 
-  /* .senate-building {
-    height: 12rem;
-  } */
-
-  .tedx-bowen-description {
+  .bowen-description {
     text-align: right;
   }
 
-  .tedx-bowen-info {
+  .bowen-info {
     max-width: 100%;
   }
-
-
 }
 
 @media (max-width: 365px) {
-  .community-button {
+  .join-community-button {
     font-size: .9rem;
-  }
-
-  .community-button {
     padding: 1rem;
     top: 40%;
   }
 
-  .tedx-independence-description {
+  .independence-description {
     font-size: 0.95rem;
     line-height: 100% !important;
   }
 
-  .tedx-logo {
+  .tedx-logo-img {
     height: 5.6rem;
     width: auto;
   }
 
-  .socials-container {
+  .footer-socials {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
   }
 
-  .social-handle {
+  .footer-social-handle {
     align-self: flex-start;
   }
 }
-
 
 /* animations */
 @keyframes fadeIn {
@@ -532,15 +500,15 @@ footer {
 }
 
 /* Button hover effect */
-.community-button {
+.join-community-button {
   transition: box-shadow 0.3s, transform 0.2s;
 }
 
-.community-button:hover {
+.join-community-button:hover {
   box-shadow: 4px 8px 24px rgba(255, 0, 0, 0.18);
 }
 
-/* --- Scroll Reveal Animation --- */
+/* scroll reveal animation */
 .fade-element {
   opacity: 0;
   transform: translateY(40px);
@@ -552,25 +520,24 @@ footer {
   transform: none;
 }
 
-
-/* Social icon hover pop */
-.social-icon {
+/* footer social icon hover */
+.footer-social-icon {
   transition: transform 0.2s, background 0.2s;
 }
 
-.social-icon:hover {
+.footer-social-icon:hover {
   transform: scale(1.2) rotate(-8deg);
   background: linear-gradient(90deg, #F00 40%, #870707 100%);
 }
 
-/* Footer links underline animation */
-.links>a {
+/* footer links underline animation */
+.footer-link-list>a {
   position: relative;
   overflow: hidden;
   padding-bottom: .2rem;
 }
 
-.links>a::after {
+.footer-link-list>a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -582,12 +549,12 @@ footer {
   transition: transform 0.3s;
 }
 
-.links>a:hover::after {
+.footer-link-list>a:hover::after {
   transform: scaleX(1);
 }
 
 /* TEDx logo subtle pulse */
-.tedx-logo {
+.tedx-logo-img {
   animation: pulseLogo 2.5s infinite alternate;
 }
 
@@ -598,86 +565,50 @@ footer {
   }
 }
 
-/* About text fade-in stagger */
-.about-text-container>p {
+/* about text fade-in stagger */
+.about-text-wrapper>p {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s, transform 0.8s;
 }
 
-.about-text-container>p.in-view {
+.about-text-wrapper>p.in-view {
   opacity: 1;
   transform: none;
 }
 
-/* Section heading slide-in */
-h2.fade-element {
-  opacity: 0;
-  transform: translateX(-40px);
-  transition: opacity 0.8s, transform 0.8s;
-}
-
-h2.fade-element.in-view {
-  opacity: 1;
-  transform: none;
-}
-
-/* --- Scroll Reveal Animation for Text --- */
-.fade-element {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.fade-element.in-view {
-  opacity: 1;
-  transform: none;
-}
-
-/* Staggered text reveal for about section */
-.about-text-container>p {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s, transform 0.8s;
-}
-
-.about-text-container>p.in-view {
-  opacity: 1;
-  transform: none;
-}
-
-.about-text-container>p.in-view:nth-child(1) {
+.about-text-wrapper>p.in-view:nth-child(1) {
   transition-delay: 0.2s;
 }
 
-.about-text-container>p.in-view:nth-child(2) {
+.about-text-wrapper>p.in-view:nth-child(2) {
   transition-delay: 0.7s;
 }
 
-.about-text-container>p.in-view:nth-child(3) {
+.about-text-wrapper>p.in-view:nth-child(3) {
   transition-delay: 1.2s;
 }
 
-.about-text-container>p.in-view:nth-child(4) {
+.about-text-wrapper>p.in-view:nth-child(4) {
   transition-delay: 1.7s;
 }
 
-.about-text-container>p.in-view:nth-child(5) {
+.about-text-wrapper>p.in-view:nth-child(5) {
   transition-delay: 2.2s;
 }
 
-/* --- Image scroll reveal animation --- */
-.senate-building,
-.tedx-logo,
-.footer-logo {
+/* image scroll reveal */
+.senate-building-img,
+.tedx-logo-img,
+.footer-logo-img {
   opacity: 0;
   transform: scale(0.95) translateY(40px);
   transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.senate-building.in-view,
-.tedx-logo.in-view,
-.footer-logo.in-view {
+.senate-building-img.in-view,
+.tedx-logo-img.in-view,
+.footer-logo-img.in-view {
   opacity: 1;
   transform: scale(1) translateY(0);
 }
