@@ -437,8 +437,9 @@ footer {
   }
 
   .tedx-logo-img {
-    height: 7.2rem;
-    width: auto;
+    height: 100%;
+    width: 100%;
+    display: block;
   }
 
   /* bowen section */
