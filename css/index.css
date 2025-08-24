@@ -531,25 +531,6 @@ footer {
   }
 }
 
-/* appear  animation */
-@keyframes appear {
-  from {
-    opacity: 0;
-    scale: 0;
-  }
-
-  to {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
-.fade-element {
-  animation: appear 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  animation-timeline: view();
-  animation-range: entry cover 40%;
-}
-
 /* Button hover effect */
 .community-button {
   transition: box-shadow 0.3s, transform 0.2s;
@@ -558,6 +539,19 @@ footer {
 .community-button:hover {
   box-shadow: 4px 8px 24px rgba(255, 0, 0, 0.18);
 }
+
+/* --- Scroll Reveal Animation --- */
+.fade-element {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.fade-element.in-view {
+  opacity: 1;
+  transform: none;
+}
+
 
 /* Social icon hover pop */
 .social-icon {
@@ -607,25 +601,83 @@ footer {
 /* About text fade-in stagger */
 .about-text-container>p {
   opacity: 0;
-  animation: fadeInUp 1s forwards;
+  transform: translateY(30px);
+  transition: opacity 0.8s, transform 0.8s;
 }
 
-.about-text-container>p:nth-child(1) {
-  animation-delay: 0.4s;
+.about-text-container>p.in-view {
+  opacity: 1;
+  transform: none;
 }
 
-.about-text-container>p:nth-child(2) {
-  animation-delay: 0.8s;
+/* Section heading slide-in */
+h2.fade-element {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s, transform 0.8s;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
+h2.fade-element.in-view {
+  opacity: 1;
+  transform: none;
+}
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* --- Scroll Reveal Animation for Text --- */
+.fade-element {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.fade-element.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Staggered text reveal for about section */
+.about-text-container>p {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.about-text-container>p.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+.about-text-container>p.in-view:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.about-text-container>p.in-view:nth-child(2) {
+  transition-delay: 0.7s;
+}
+
+.about-text-container>p.in-view:nth-child(3) {
+  transition-delay: 1.2s;
+}
+
+.about-text-container>p.in-view:nth-child(4) {
+  transition-delay: 1.7s;
+}
+
+.about-text-container>p.in-view:nth-child(5) {
+  transition-delay: 2.2s;
+}
+
+/* --- Image scroll reveal animation --- */
+.senate-building,
+.tedx-logo,
+.footer-logo {
+  opacity: 0;
+  transform: scale(0.95) translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.senate-building.in-view,
+.tedx-logo.in-view,
+.footer-logo.in-view {
+  opacity: 1;
+  transform: scale(1) translateY(0);
 }

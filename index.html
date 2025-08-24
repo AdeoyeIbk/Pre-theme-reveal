@@ -23,10 +23,10 @@
     <div class="about-top">
       <h2>What is <span class="red-text">TEDx</span> ?</h2>
       <div class="about-text-container">
-        <p class="fade-element">"TEDx is a global movement of local, independently organized events where speakers share powerful,
+        <p>"TEDx is a global movement of local, independently organized events where speakers share powerful,
           thought-provoking
           talks on a variety of topics.</p>
-        <p class="fade-element">TEDx is more than just talks. It's where you can learn new things, connect with cool people, and get inspired
+        <p>TEDx is more than just talks. It's where you can learn new things, connect with cool people, and get inspired
           by fresh
           ideas. Whether you're into science, art, or social issues, TEDx has something that will spark your curiosity
           and
@@ -38,7 +38,7 @@
       <p class="tedx-independence-description">The <span class="red-text x">'x'</span> stands for <br> <span
           class="red-text">independently organized.</span>
       </p>
-      <img src="assets/logo-black-4.webp" alt="TEDx Logo" class="tedx-logo">
+      <img src="assets/logo-black-4.webp" alt="TEDx Logo" class="tedx-logo fade-element">
     </div>
   </section>
 
@@ -56,9 +56,8 @@
           visionaries, students, creatives, and changemakers who share ideas that challenge, educate, and ignite
           transformation.</p>
       </div>
-      <img src="assets/senate-building (1).webp" alt="Bowen Senate Building Image" class="senate-building">
-
-
+      <img src="assets/senate-building (1).webp" alt="Bowen Senate Building Image" class="senate-building fade-element">
+    </div>
 
   </section>
 
@@ -114,6 +113,24 @@
     </div>
     <p class="copyright">&copy 2025 tedxbowen. All rights reserved</p>
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const animatedElements = document.querySelectorAll(
+        '.fade-element, .about-text-container>p, .senate-building, .tedx-logo, .footer-logo'
+      );
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      }, { threshold: 0.2 });
+
+      animatedElements.forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
 </body>
 
 </html>
