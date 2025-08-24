@@ -49,36 +49,7 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* appear  animation */
-@keyframes appear {
-  from {
-    opacity: 0;
-    scale: 0;
-  }
-
-  to {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
-.fade-element {
-  animation: appear 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  animation-timeline: view();
-  animation-range: entry cover 40%;
-}
 
 /* main */
 .hero {
@@ -543,5 +514,118 @@ footer {
 
   .social-handle {
     align-self: flex-start;
+  }
+}
+
+
+/* animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* appear  animation */
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.fade-element {
+  animation: appear 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-timeline: view();
+  animation-range: entry cover 40%;
+}
+
+/* Button hover effect */
+.community-button {
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.community-button:hover {
+  box-shadow: 4px 8px 24px rgba(255, 0, 0, 0.18);
+}
+
+/* Social icon hover pop */
+.social-icon {
+  transition: transform 0.2s, background 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2) rotate(-8deg);
+  background: linear-gradient(90deg, #F00 40%, #870707 100%);
+}
+
+/* Footer links underline animation */
+.links>a {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: .2rem;
+}
+
+.links>a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.links>a:hover::after {
+  transform: scaleX(1);
+}
+
+/* TEDx logo subtle pulse */
+.tedx-logo {
+  animation: pulseLogo 2.5s infinite alternate;
+}
+
+@keyframes pulseLogo {
+  to {
+    filter: drop-shadow(0 0 16px #F00);
+    transform: scale(1.03);
+  }
+}
+
+/* About text fade-in stagger */
+.about-text-container>p {
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+.about-text-container>p:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.about-text-container>p:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
